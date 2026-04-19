@@ -1,201 +1,93 @@
-his repository contains a frontend simulation of the Tech Store platform.
+Ce dépôt contient une simulation frontend de la plateforme Tech Store.
 
-The purpose of this version is to showcase:
+L’objectif de cette version est de mettre en avant :
 
-UI/UX structure
-Component architecture
-State management logic
-Frontend routing
-API integration workflow (mocked)
+Structure UI/UX
+Architecture des composants
+Logique de gestion d’état
+Routage frontend
+Flux d’intégration API (simulé)
 
-This is not connected to the production backend.
-Instead, it uses a simulated data layer that mimics the expected backend responses.
+Cette version n’est pas connectée au backend de production. À la place, elle utilise une couche de données simulée qui reproduit le comportement attendu du backend.
 
-Objective
+Objectif
 
-The goal of this repository is to:
+Le but de ce dépôt est de :
 
-Demonstrate how the frontend behaves in a real environment
-Validate user flows (authentication, product browsing, cart logic, etc.)
-Simulate API calls and asynchronous behavior
-Present a near-final visual and functional experience
+Démontrer le comportement du frontend dans un environnement réaliste
+Valider les parcours utilisateurs (authentification, navigation produits, logique de panier, etc.)
+Simuler les appels API et les comportements asynchrones
+Présenter une expérience visuelle et fonctionnelle proche de la version finale
 
-It serves as a frontend proof of concept before full backend integration.
+Il s’agit d’un proof of concept frontend avant l’intégration complète du backend.
 
 Architecture
-Frontend Stack
+Stack Frontend
 React
-Vite / CRA (depending on your setup)
+Vite / CRA (selon la configuration du projet)
 Tailwind CSS
 React Router
-Context API / State management (if used)
-Simulated Backend
+Context API / gestion d’état
+Backend simulé
 
-Instead of a real backend, this project uses:
+Au lieu d’un backend réel, ce projet utilise :
 
-Local JSON data
-Mock service layer
-Simulated async API calls (setTimeout, Promises)
-Structured service functions that mirror real REST endpoints
-
-Example structure:
-
+Données JSON locales
+Couche de services mockée
+Appels API asynchrones simulés (setTimeout, Promises)
+Fonctions de service structurées qui reproduisent des endpoints REST réels
+Exemple de structure :
 src/
- ├── components/
- ├── pages/
- ├── services/        ← mock API layer
- ├── data/            ← static JSON data
- ├── context/
- └── routes/
+├── components/
+├── pages/
+├── services/ ← couche API simulée
+├── data/ ← données JSON statiques
+├── context/
+└── routes/
 
-The services/ layer is designed to match the expected real API contract.
+La couche services/ est conçue pour correspondre au contrat API réel attendu.
 
-Why a Simulation?
+Pourquoi une simulation ?
 
-This approach allows:
+Cette approche permet :
 
-Frontend-first development
-Faster UI iteration
-Independent development from backend team
-Clear separation of concerns
-Easy replacement of mock services with real API calls later
+Un développement frontend-first
+Une itération UI plus rapide
+Une indépendance vis-à-vis de l’équipe backend
+Une séparation claire des responsabilités
+Un remplacement facile des services mock par de vraies API plus tard
 
-When integrating the real backend, only the service layer will need adjustment.
+Lors de l’intégration du backend réel, seule la couche de services devra être modifiée.
 
-Current Features (Simulated)
-Product listing
-Product details page
-Cart management
-UI-based authentication flow
-Responsive layout
-Form validation
-State persistence (if implemented)
-How to Run the Project
+Fonctionnalités actuelles (simulées)
+Liste de produits
+Page de détails produit
+Gestion du panier
+Flux d’authentification côté UI
+Interface responsive
+Validation des formulaires
+Persistance d’état
+Lancer le projet
 npm install
 npm run dev
 
-Then open:
+Puis ouvrir :
 
 http://localhost:5173
 
-(or your configured port)
+Avertissement
 
-Disclaimer
+Ce dépôt est uniquement destiné à des fins de démonstration et de validation architecturale.
 
-This repository is for demonstration and architectural validation purposes only.
+Aucune base de données réelle
+Aucun système d’authentification en production
+Aucun système de paiement réel
+Aucune API de production
 
-No real database
-No production authentication
-No real payment system
-No production API
+Il reflète uniquement l’expérience utilisateur et la structure frontend prévue.
 
-It reflects the intended final user experience and frontend structure.
-
-Future Integration Plan
-Replace mock services with real API endpoints
-Connect authentication to backend
-Add production-grade error handling
-Implement secure API communication
-Author
-
-Yanis Saidi
-Frontend & Full Stack Developerhis repository contains a frontend simulation of the Tech Store platform.
-
-The purpose of this version is to showcase:
-
-UI/UX structure
-Component architecture
-State management logic
-Frontend routing
-API integration workflow (mocked)
-
-This is not connected to the production backend.
-Instead, it uses a simulated data layer that mimics the expected backend responses.
-
-Objective
-
-The goal of this repository is to:
-
-Demonstrate how the frontend behaves in a real environment
-Validate user flows (authentication, product browsing, cart logic, etc.)
-Simulate API calls and asynchronous behavior
-Present a near-final visual and functional experience
-
-It serves as a frontend proof of concept before full backend integration.
-
-Architecture
-Frontend Stack
-React
-Vite / CRA (depending on your setup)
-Tailwind CSS
-React Router
-Context API / State management (if used)
-Simulated Backend
-
-Instead of a real backend, this project uses:
-
-Local JSON data
-Mock service layer
-Simulated async API calls (setTimeout, Promises)
-Structured service functions that mirror real REST endpoints
-
-Example structure:
-
-src/
- ├── components/
- ├── pages/
- ├── services/        ← mock API layer
- ├── data/            ← static JSON data
- ├── context/
- └── routes/
-
-The services/ layer is designed to match the expected real API contract.
-
-Why a Simulation?
-
-This approach allows:
-
-Frontend-first development
-Faster UI iteration
-Independent development from backend team
-Clear separation of concerns
-Easy replacement of mock services with real API calls later
-
-When integrating the real backend, only the service layer will need adjustment.
-
-Current Features (Simulated)
-Product listing
-Product details page
-Cart management
-UI-based authentication flow
-Responsive layout
-Form validation
-State persistence (if implemented)
-How to Run the Project
-npm install
-npm run dev
-
-Then open:
-
-http://localhost:5173
-
-Disclaimer
-
-This repository is for demonstration and architectural validation purposes only.
-
-No real database
-No production authentication
-No real payment system
-No production API
-
-It reflects the intended final user experience and frontend structure.
-
-Future Integration Plan
-Replace mock services with real API endpoints
-Connect authentication to backend
-Add production-grade error handling
-Implement secure API communication
-Author
-
-Yanis Saidi
-Frontend & Full Stack Developer
+Plan d’intégration future
+Remplacement des services mock par de vraies API
+Connexion de l’authentification au backend
+Ajout d’une gestion d’erreurs en production
+Implémentation de communications API sécurisées
