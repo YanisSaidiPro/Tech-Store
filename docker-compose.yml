@@ -1,0 +1,12 @@
+# MongoDB local sans installation système : docker compose up -d
+# Puis dans backend/.env : MONGODB_URI=mongodb://127.0.0.1:27017/techstore
+services:
+  mongo:
+    image: mongo:7
+    ports:
+      - '27017:27017'
+    volumes:
+      - techstore_mongo_data:/data/db
+
+volumes:
+  techstore_mongo_data:
